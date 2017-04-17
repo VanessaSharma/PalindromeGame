@@ -19,23 +19,23 @@ import static junit.framework.Assert.assertTrue;
 @Config(constants = BuildConfig.class, sdk = Build.VERSION_CODES.LOLLIPOP)
 @RunWith(RobolectricGradleTestRunner.class)
 
-public class PlayActivityTest {
-    private PlayActivity activity;
+public class PalindromeActivityTest {
+    private PalindromeActivity activity;
 
     @Before
     public void setup(){
-        activity = Robolectric.setupActivity(PlayActivity.class);
+        activity = Robolectric.setupActivity(PalindromeActivity.class);
     }
 
     @Test
     public void validateTextViewContent(){
-        TextView titleTextView = (TextView) activity.findViewById(R.id.promptTextView);
-        assertTrue("Check to see if your word is a palindrome!".equals(titleTextView.getText().toString()));
+        TextView palindromeTextView = (TextView) activity.findViewById(R.id.palindromeTextView);
+        assertTrue("Yay! Your word is a palindrome!".equals(palindromeTextView.getText().toString()));
     }
     @Test
-    public void resultsActivityStarted() {
-        activity.findViewById(R.id.enterButton).performClick();
-        Intent expectedIntent = new Intent(activity, PalindromeActivity.class);
+    public void mainActivityStarted() {
+        activity.findViewById(R.id.replayButton).performClick();
+        Intent expectedIntent = new Intent(activity, MainActivity.class);
         ShadowActivity shadowActivity = org.robolectric.Shadows.shadowOf(activity);
         Intent actualIntent = shadowActivity.getNextStartedActivity();
         assertTrue(actualIntent.filterEquals(expectedIntent));

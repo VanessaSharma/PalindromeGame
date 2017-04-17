@@ -13,12 +13,9 @@ import butterknife.ButterKnife;
 
 public class PlayActivity extends AppCompatActivity implements View.OnClickListener {
 
-    @Bind(R.id.promptTextView)
-    TextView mPromptTextView;
-    @Bind(R.id.userWordEditText)
-    EditText mUserWordEditText;
-    @Bind(R.id.enterButton)
-    Button mEnterButton;
+    @Bind(R.id.promptTextView) TextView mPromptTextView;
+    @Bind(R.id.userWordEditText) EditText mUserWordEditText;
+    @Bind(R.id.enterButton) Button mEnterButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +24,7 @@ public class PlayActivity extends AppCompatActivity implements View.OnClickListe
         ButterKnife.bind(this);
 
         mEnterButton.setOnClickListener(this);
-        ;
+
     }
 
     @Override
