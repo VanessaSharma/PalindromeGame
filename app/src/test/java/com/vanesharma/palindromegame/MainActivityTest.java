@@ -34,7 +34,7 @@ public class MainActivityTest {
         assertTrue("Palindrome".equals(titleTextView.getText().toString()));
     }
     @Test
-    public void secondActivityStarted() {
+    public void playActivityStarted() {
         activity.findViewById(R.id.startButton).performClick();
         Intent expectedIntent = new Intent(activity, PlayActivity.class);
         ShadowActivity shadowActivity = org.robolectric.Shadows.shadowOf(activity);

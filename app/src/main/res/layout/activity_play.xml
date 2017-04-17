@@ -4,10 +4,36 @@
     android:id="@+id/activity_play"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.vanesharma.palindromegame.PlayActivity">
 
+    <Button
+        android:text="See Results!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:id="@+id/enterButton"
+        android:layout_below="@+id/userWordEditText"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Enter your word!"
+        android:ems="10"
+        android:layout_marginTop="54dp"
+        android:id="@+id/userWordEditText"
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/promptTextView"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Check to see if your word is a palindrome!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:id="@+id/promptTextView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
