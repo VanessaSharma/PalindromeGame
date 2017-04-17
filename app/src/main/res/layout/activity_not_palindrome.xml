@@ -11,24 +11,24 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/notpalindrome"
+        app:srcCompat="@drawable/not"
         android:id="@+id/imageView"
-        android:layout_above="@+id/replayButton2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="50dp" />
+        android:layout_marginTop="85dp"
+        android:layout_below="@+id/notPalindromeTextView"
+        android:layout_centerHorizontal="true" />
 
     <TextView
-        android:text="Sorry, you're word is not a palindrome!"
+        android:text="Sorry, your word is not a palindrome!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="51dp"
         android:id="@+id/notPalindromeTextView"
-        android:textSize="24sp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
+        android:textSize="22sp"
         android:textStyle="normal|bold"
         android:textAlignment="center"
-        android:textColor="@android:color/black" />
+        android:textColor="@android:color/black"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:text="Replay"
@@ -36,13 +36,13 @@
         android:layout_height="wrap_content"
         android:id="@+id/replayButton2"
         android:elevation="24dp"
-        android:layout_marginBottom="81dp"
         android:fontFamily="monospace"
         android:background="@android:color/black"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:backgroundTint="@android:color/background_light"
         android:typeface="monospace"
         android:textStyle="normal|bold"
-        android:layout_alignParentBottom="true"
+        android:layout_marginTop="38dp"
+        android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>
