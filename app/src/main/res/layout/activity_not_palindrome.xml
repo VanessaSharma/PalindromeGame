@@ -5,28 +5,8 @@
     android:id="@+id/activity_not_palindrome"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.vanesharma.palindromegame.NotPalindromeActivity">
-
-    <TextView
-        android:text="Sorry, you're word is not a palindrome!"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="39dp"
-        android:id="@+id/notPalindromeTextView"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:textSize="18sp" />
-
-    <Button
-        android:text="Replay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/notPalindromeTextView"
-        android:layout_marginStart="95dp"
-        android:layout_marginBottom="112dp"
-        android:id="@+id/replayButton2"
-        android:elevation="23dp" />
+    tools:context="com.vanesharma.palindromegame.NotPalindromeActivity"
+    android:background="@drawable/backdrop">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -36,4 +16,33 @@
         android:layout_above="@+id/replayButton2"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="50dp" />
+
+    <TextView
+        android:text="Sorry, you're word is not a palindrome!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:id="@+id/notPalindromeTextView"
+        android:textSize="24sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textStyle="normal|bold"
+        android:textAlignment="center"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:text="Replay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/replayButton2"
+        android:elevation="24dp"
+        android:layout_marginBottom="81dp"
+        android:fontFamily="monospace"
+        android:background="@android:color/black"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:backgroundTint="@android:color/background_light"
+        android:typeface="monospace"
+        android:textStyle="normal|bold"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
