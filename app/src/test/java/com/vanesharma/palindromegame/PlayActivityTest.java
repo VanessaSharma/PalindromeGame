@@ -1,8 +1,8 @@
 package com.vanesharma.palindromegame;
 
-
 import android.content.Intent;
 import android.os.Build;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import org.junit.Before;
@@ -20,23 +20,28 @@ import static junit.framework.Assert.assertTrue;
 @Config(constants = BuildConfig.class, sdk = Build.VERSION_CODES.LOLLIPOP)
 @RunWith(RobolectricGradleTestRunner.class)
 
-public class MainActivityTest {
-    private MainActivity activity;
+public class PlayActivityTest {
+    private PlayActivity activity;
 
     @Before
     public void setup(){
-        activity = Robolectric.setupActivity(MainActivity.class);
+        activity = Robolectric.setupActivity(PlayActivity.class);
     }
 
     @Test
     public void validateTextViewContent(){
-        TextView titleTextView = (TextView) activity.findViewById(R.id.titleTextView);
-        assertTrue("Palindrome".equals(titleTextView.getText().toString()));
+        TextView titleTextView = (TextView) activity.findViewById(R.id.promptTextView);
+        assertTrue("Check to see if your word is a palindrome!".equals(titleTextView.getText().toString()));
     }
     @Test
-    public void playActivityStarted() {
-        activity.findViewById(R.id.startButton).performClick();
-        Intent expectedIntent = new Intent(activity, PlayActivity.class);
+    public void validateEditViewContent(){
+        TextView titleTextView = (EditText) activity.findViewById(R.id.userWordEditText);
+        assertTrue("Enter your word!".equals(titleTextView.getText().toString()));
+    }
+    @Test
+    public void resultsActivityStarted() {
+        activity.findViewById(R.id.enterButton).performClick();
+        Intent expectedIntent = new Intent(activity, ResultsActivity.class);
         ShadowActivity shadowActivity = org.robolectric.Shadows.shadowOf(activity);
         Intent actualIntent = shadowActivity.getNextStartedActivity();
         assertTrue(actualIntent.filterEquals(expectedIntent));
