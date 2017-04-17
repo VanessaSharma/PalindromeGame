@@ -13,7 +13,6 @@ import org.robolectric.RobolectricGradleTestRunner;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadows.ShadowActivity;
 
-import android.widget.TextView;
 import static junit.framework.Assert.assertTrue;
 
 
@@ -41,7 +40,7 @@ public class PlayActivityTest {
     @Test
     public void resultsActivityStarted() {
         activity.findViewById(R.id.enterButton).performClick();
-        Intent expectedIntent = new Intent(activity, ResultsActivity.class);
+        Intent expectedIntent = new Intent(activity, PalindromeActivity.class);
         ShadowActivity shadowActivity = org.robolectric.Shadows.shadowOf(activity);
         Intent actualIntent = shadowActivity.getNextStartedActivity();
         assertTrue(actualIntent.filterEquals(expectedIntent));

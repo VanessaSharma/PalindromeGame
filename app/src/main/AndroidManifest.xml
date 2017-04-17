@@ -16,7 +16,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".PlayActivity" />
-        <activity android:name=".ResultsActivity"></activity>
+        <activity android:name=".PalindromeActivity" />
+
+        <service
+            android:name=".Palindrome"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".NotPalindromeActivity"></activity>
     </application>
 
 </manifest>

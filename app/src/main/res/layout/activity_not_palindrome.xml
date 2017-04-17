@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_not_palindrome"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.vanesharma.palindromegame.NotPalindromeActivity">
+
+    <TextView
+        android:text="Sorry, you're word is not a palindrome!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:id="@+id/notPalindromeTextView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp" />
+
+    <Button
+        android:text="Replay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/notPalindromeTextView"
+        android:layout_marginStart="95dp"
+        android:layout_marginBottom="112dp"
+        android:id="@+id/replayButton2"
+        android:elevation="23dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/notpalindrome"
+        android:id="@+id/imageView"
+        android:layout_above="@+id/replayButton2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp" />
+</RelativeLayout>
