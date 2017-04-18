@@ -26,7 +26,7 @@ public class NotPalindromeActivity extends AppCompatActivity implements View.OnC
         @Override
         public void onClick(View v){
             if(v == mReplayButton2){
-                Intent intent = new Intent(NotPalindromeActivity.this, MainActivity.class);
+                Intent intent = new Intent(NotPalindromeActivity.this, PlayActivity.class);
                 startActivity(intent);
             }else{
                 Intent intent = new Intent(NotPalindromeActivity.this, NotPalindromeActivity.class);

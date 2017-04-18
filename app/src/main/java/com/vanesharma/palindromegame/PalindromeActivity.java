@@ -26,7 +26,7 @@ public class PalindromeActivity extends AppCompatActivity implements View.OnClic
     @Override
     public void onClick(View v){
         if(v == mReplayButton){
-            Intent intent = new Intent(PalindromeActivity.this, MainActivity.class);
+            Intent intent = new Intent(PalindromeActivity.this, PlayActivity.class);
             startActivity(intent);
         }else{
             Intent intent = new Intent(PalindromeActivity.this, PalindromeActivity.class);
