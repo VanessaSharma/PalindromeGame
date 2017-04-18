@@ -34,12 +34,15 @@ public class PlayActivity extends AppCompatActivity implements View.OnClickListe
             String inputString = mUserWordEditText.getText().toString();
             for (int i = mUserWordEditText.length() - 1; i >= 0; i--)
                 palindromeString = palindromeString + inputString.charAt(i);
-            if (inputString.equals(palindromeString)) {
-                Intent intent = new Intent(PlayActivity.this, PalindromeActivity.class);
-                startActivity(intent);
-            } else {
-                Intent intent = new Intent(PlayActivity.this, NotPalindromeActivity.class);
-                startActivity(intent);
+                if(mUserWordEditText.getText().toString().length() == 0 ) {
+                mUserWordEditText.setError("Word is required!");
+                }
+                else if (inputString.equals(palindromeString)) {
+                    Intent intent = new Intent(PlayActivity.this, PalindromeActivity.class);
+                    startActivity(intent);
+                } else {
+                    Intent intent = new Intent(PlayActivity.this, NotPalindromeActivity.class);
+                    startActivity(intent);
             }
         }
 
