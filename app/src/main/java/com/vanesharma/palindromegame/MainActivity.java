@@ -11,10 +11,12 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    @Bind(R.id.titleTextView) TextView mTitleTextView;
-    @Bind(R.id.startButton) Button mStartButton;
+    @Bind(R.id.titleTextView)
+    TextView mTitleTextView;
+    @Bind(R.id.startButton)
+    Button mStartButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,11 +28,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void onClick(View v){
-        if(v == mStartButton){
+    public void onClick(View v) {
+        if (v == mStartButton) {
             Intent intent = new Intent(MainActivity.this, PlayActivity.class);
             startActivity(intent);
-        }else{
+        } else {
             Intent intent = new Intent(MainActivity.this, MainActivity.class);
             startActivity(intent);
         }

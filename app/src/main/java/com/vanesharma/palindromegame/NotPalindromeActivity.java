@@ -10,10 +10,12 @@ import android.widget.TextView;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class NotPalindromeActivity extends AppCompatActivity implements View.OnClickListener{
+public class NotPalindromeActivity extends AppCompatActivity implements View.OnClickListener {
 
-    @Bind(R.id.notPalindromeTextView) TextView mNotPalindromeTextView;
-    @Bind(R.id.replayButton2) Button mReplayButton2;
+    @Bind(R.id.notPalindromeTextView)
+    TextView mNotPalindromeTextView;
+    @Bind(R.id.replayButton2)
+    Button mReplayButton2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,16 +25,17 @@ public class NotPalindromeActivity extends AppCompatActivity implements View.OnC
 
         mReplayButton2.setOnClickListener(this);
     }
-        @Override
-        public void onClick(View v){
-            if(v == mReplayButton2){
-                Intent intent = new Intent(NotPalindromeActivity.this, PlayActivity.class);
-                startActivity(intent);
-            }else{
-                Intent intent = new Intent(NotPalindromeActivity.this, NotPalindromeActivity.class);
-                startActivity(intent);
-            }
+
+    @Override
+    public void onClick(View v) {
+        if (v == mReplayButton2) {
+            Intent intent = new Intent(NotPalindromeActivity.this, PlayActivity.class);
+            startActivity(intent);
+        } else {
+            Intent intent = new Intent(NotPalindromeActivity.this, NotPalindromeActivity.class);
+            startActivity(intent);
         }
     }
+}
 
 
